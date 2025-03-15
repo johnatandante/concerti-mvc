@@ -6,10 +6,16 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ListView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dp">
 
-    </ListView>
+    </ListView></LinearLayout>
 
 </RelativeLayout>
