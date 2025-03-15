@@ -22,13 +22,13 @@ import java.util.TreeSet;
 
 public class MainActivity extends AppCompatActivity {
 
-    private List<String> immagine = new ArrayList<>();
-    private List<String> nome = new ArrayList<>();
-    private List<String> casaEditrice = new ArrayList<>();
+    private final List<String> immagine = new ArrayList<>();
+    private final List<String> nome = new ArrayList<>();
+    private final List<String> casaEditrice = new ArrayList<>();
 
-    private List<String> mData0 = new ArrayList<>();
-    private List<String> mData1 = new ArrayList<>();
-    private List<String> mData2 = new ArrayList<>();
+    private final List<String> mData0 = new ArrayList<>();
+    private final List<String> mData1 = new ArrayList<>();
+    private final List<String> mData2 = new ArrayList<>();
 
     private MyCustomAdapter         mAdapter;
 
@@ -83,9 +83,9 @@ public class MainActivity extends AppCompatActivity {
         private static final int TYPE_MAX_COUNT = TYPE_SEPARATOR + 1;
 
 
-        private LayoutInflater mInflater;
+        private final LayoutInflater mInflater;
 
-        private TreeSet<Integer> mSeparatorsSet = new TreeSet<Integer>();
+        private final TreeSet<Integer> mSeparatorsSet = new TreeSet<Integer>();
 
         public MyCustomAdapter() {
             mInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
