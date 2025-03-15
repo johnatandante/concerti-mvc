@@ -10,7 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
+//import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -29,8 +29,6 @@ public class MainActivity extends AppCompatActivity {
     private final List<String> mData0 = new ArrayList<>();
     private final List<String> mData1 = new ArrayList<>();
     private final List<String> mData2 = new ArrayList<>();
-
-    private MyCustomAdapter         mAdapter;
 
     ListView llComics;
 
@@ -69,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void caricaListView() {
         llComics.setAdapter(null);
-        mAdapter = new MyCustomAdapter();
+        MyCustomAdapter mAdapter = new MyCustomAdapter();
         for(int i=0;i<immagine.size();i++) {
             mAdapter.addItem(immagine.get(i),nome.get(i),casaEditrice.get(i));
         }
@@ -85,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
         private final LayoutInflater mInflater;
 
-        private final TreeSet<Integer> mSeparatorsSet = new TreeSet<Integer>();
+        private final TreeSet<Integer> mSeparatorsSet = new TreeSet<>();
 
         public MyCustomAdapter() {
             mInflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
